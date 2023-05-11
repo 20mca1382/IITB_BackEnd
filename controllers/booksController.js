@@ -78,9 +78,9 @@ const allBooks =async (req,res)=>{
 
 const getBk = async (req,res)=>{
     try {
-        
-        const books = await booksModel.findById({id: req.id});
-        console.log(req.id);
+       
+        const books = await booksModel.find({_id : req.body.id});
+        // console.log(req.body.id);
         res.status(200).send(books);
 
     } catch (error) {

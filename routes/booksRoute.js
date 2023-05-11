@@ -8,12 +8,12 @@ booksRoute.get("/getBook", auth, getBook);
 
 booksRoute.post("/createBook", auth, createBook);
 
-booksRoute.delete("/:id", auth, deleteBook);
+booksRoute.delete("/deleteBook/:id", auth, deleteBook);
 
-booksRoute.put("/:id", auth, updateBook);
+booksRoute.put("/updateBook/:id", auth, updateBook);
 
 booksRoute.get("/allBooks", allBooks)
 
-booksRoute.post("/getBk/:id", auth, getBk )
+booksRoute.post("/getBk", auth, getBk )
 
 module.exports = booksRoute;
